@@ -1,0 +1,104 @@
+/* ── About Teaser ────────────────────────────────────────────── */
+.about-teaser {
+  padding: 100px 40px;
+  background: var(--brand-light);
+}
+
+.about-teaser__inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.about-teaser__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-teaser__lede {
+  font-size: clamp(20px, 2.2vw, 26px);
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin: 0 0 20px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+.about-teaser__body p {
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-altprimary);
+  margin: 0 0 18px;
+}
+
+.about-teaser__body em {
+  color: var(--text-primary);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.about-teaser__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: var(--brand);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.about-teaser__btn:hover {
+  background: var(--brand-dark);
+  transform: translateY(-2px);
+}
+
+.about-teaser__btn .feat-link-arrow {
+  transition: transform 0.25s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.about-teaser__btn:hover .feat-link-arrow {
+  transform: translateX(4px);
+}
+
+/* Facts sidebar */
+.about-teaser__facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.about-teaser__facts > div {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+
+.about-teaser__facts > div:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.about-teaser__facts dt {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.about-teaser__facts dd {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-teaser { padding: 60px 20px; }
+  .about-teaser__grid { grid-template-columns: 1fr; gap: 32px; }
+}

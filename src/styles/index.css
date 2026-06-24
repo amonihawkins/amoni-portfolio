@@ -1,0 +1,228 @@
+/* Fonts */
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+
+/* ── Design Tokens ───────────────────────────────────────────── */
+:root {
+  --brand:        #4A5AE8;
+  --brand-alternate: #C9CEF8;
+  --brand-light:  #EEF0FD;
+  --brand-dark:   #3444CC;
+
+  --bg:           #FFFFFF;
+  --bg-secondary: #F7F7F5;
+  --bg-dark:      #111110;
+
+  --text-primary:   #111110;
+  --text-altprimary: #444444;
+  --text-secondary: #6B6B68;
+  --text-muted:     #9A9A97;
+  --text-on-dark:   #F7F7F5;
+
+  --border:       rgba(17, 17, 16, 0.10);
+  --border-mid:   rgba(17, 17, 16, 0.18);
+
+  --radius-sm:  6px;
+  --radius-md:  12px;
+  --radius-lg:  20px;
+  --radius-xl:  32px;
+
+  --font-display: 'Satoshi', Georgia, serif;
+  --font-body:    'Satoshi', system-ui, sans-serif;
+
+  --max-w: 1280px;
+  --section-gap: 120px;
+}
+
+/* ── Reset ───────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+/* ── Utility ─────────────────────────────────────────────────── */
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Fade-up animation used across sections */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up {
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+.fade-up-delay-4 { animation-delay: 0.4s; }
+
+/* Section label (e.g. "FEATURED PROJECTS") */
+.section-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+/* Tag / pill chips */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 400;
+  border: 1px solid var(--border-mid);
+  color: var(--text-secondary);
+  background: transparent;
+  white-space: nowrap;
+}
+.tag--brand {
+  background: var(--brand-light);
+  border-color: transparent;
+  color: var(--brand-dark);
+}
+
+/* ── Custom cursor ───────────────────────────────────────────── */
+@media (hover: hover) and (pointer: fine) {
+  body { cursor: none; }
+  a, button, [data-cursor] { cursor: none; }
+
+  .cursor-dot, .cursor-ring {
+    position: fixed; left: 0; top: 0;
+    pointer-events: none; z-index: 9999;
+  }
+
+  .cursor-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--brand);
+    margin: -3px 0 0 -3px;
+  }
+
+  .cursor-ring {
+    width: 28px; height: 28px; border-radius: 50%;
+    border: 1.5px solid var(--brand);
+    margin: -14px 0 0 -14px;
+    transition: width .22s cubic-bezier(.2,.7,.3,1),
+                height .22s cubic-bezier(.2,.7,.3,1),
+                margin .22s cubic-bezier(.2,.7,.3,1),
+                background .18s, border-color .18s;
+  }
+
+  .cursor-ring.link {
+    width: 40px; height: 40px;
+    margin: -20px 0 0 -20px;
+    background: var(--brand-alternate);
+  }
+
+  .cursor-ring.view {
+    width: 72px; height: 72px;
+    margin: -36px 0 0 -36px;
+    background: var(--brand);
+    border-color: var(--brand);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  .cursor-ring.view::after { content: 'VIEW'; color: white; }
+}
+
+/* ── Scrollbar ───────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-mid); border-radius: 3px; }
+
+/* ── Responsive helpers ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  :root { --section-gap: 80px; }
+}
+
+/* ── Scroll reveal ───────────────────────────────────────────── */
+[data-reveal] > * {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+[data-reveal].in > * {
+  opacity: 1;
+  transform: none;
+}
