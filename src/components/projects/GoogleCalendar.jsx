@@ -539,7 +539,7 @@ export default function GoogleCalendar() {
               title: 'Event Creation',
               subtitle: 'Refined event creation flow by integrating new accessibility settings panel',
               body: 'Adhering to participant feedback, we removed the AI event template auto fill-in and purely focused on accessibility settings. With the accessibility page, users can adjust settings to their liking. We wanted to make sure that this addition was integrated into the current functionality of Google Calendar which is why we added a page to the existing settings bar.',
-              video: '/assets/gcal-final-task1.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319094/gcal-final-task1_m34wip.mp4',
             },
             {
               num: '#2',
@@ -547,7 +547,7 @@ export default function GoogleCalendar() {
               title: 'Color Coding Items',
               subtitle: 'Enhanced calendar customization for better visibility and differentiation',
               body: 'In the customization panel, users can create new combinations of colors, patterns, and shapes to assign to their calendars. Unlike before, we added a live preview section with a built-in WCAG contrast checker, so that users can test out their selections before confirming.',
-              video: '/assets/gcal-final-task2.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319094/gcal-final-task2_jp8d5r.mp4',
             },
             {
               num: '#3',
@@ -555,7 +555,7 @@ export default function GoogleCalendar() {
               title: 'Manage/View Calendars',
               subtitle: 'Introduced focus mode and event-adopted tasks for managing separate calendars',
               body: 'When editing a task, users can adopt an existing event color and a pattern overlay to the task. We decided to include the live preview here as well for additional support.',
-              video: '/assets/gcal-final-task3.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319095/gcal-final-task3_sjeqdp.mp4',
             },
           ].map((task, index) => (
             <div key={task.num} className="cs-task-card" style={{

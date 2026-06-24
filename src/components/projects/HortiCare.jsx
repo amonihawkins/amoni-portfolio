@@ -979,7 +979,7 @@ export default function HortiCare() {
                   {/* Video left */}
                   <div style={{ position: 'relative', cursor: 'zoom-in' }} onClick={() => setVideoLightbox('/assets/horticare-final-demo.mp4')}>
                     <video
-                      src="/assets/horticare-final-demo.mp4"
+                      src="https://res.cloudinary.com/dp14rewbz/video/upload/v1782319096/horticare-final-demo_yuclru.mp4"
                       autoPlay loop muted playsInline
                       onLoadedMetadata={e => e.target.playbackRate = 1.25}
                       style={{ width: '100%', borderRadius: 'var(--radius-md)', display: 'block', objectFit: 'contain', aspectRatio: '9 / 16', background: 'var(--bg-secondary)' }}

@@ -787,28 +787,28 @@ export default function Flikshop() {
               color: '#6B1DA7',
               subtitle: 'Streamlined the process for navigating Flikshop Angels in-app & submitting a donation',
               body: 'Adhering to client feedback, Flikshop Angels now replaces the School of Business in the main button, with a redesigned homepage that surfaces active subscriptions, renewal dates, and recent donations upfront. The gift flow guides users through a simple 3-step donation process with direct context about the Angels program and a downloadable receipt for confirmation.',
-              video: '/assets/flik-final-app-angels.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319094/flik-final-app-angels_k7hsgh.mp4',
             },
             {
               label: 'Mobile App — Flikshop Angels Rewards & Settings',
               color: '#6B1DA7',
               subtitle: 'Standardized the Rewards store & implemented account management',
               body: 'Adhering to user feedback, we redesigned the rewards tracker to resemble a store which reduces the gimmicky feeling and gives users more control over which reward they cash in. The new settings page addresses the previous design\'s Help and Documentation gap by surfacing a dedicated Help & Support section.',
-              video: '/assets/flik-final-app-rewards.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319093/flik-final-app-rewards_pdpvae.mp4',
             },
             {
               label: 'Mobile Website — Flikshop Home',
               color: '#6B1DA7',
               subtitle: 'Enhanced brand messaging/imagery & spotlighted product verticals',
               body: 'Marcus\' Ted Talk is featured as a looping gif at the top to immediately establish personal connection to the mission, followed by a structured flow of Mission → Business Verticals → Impact Metrics → Angels CTA → Testimonials → Partners. This hierarchy was designed to inform and emotionally engage users in one seamless scroll.',
-              video: '/assets/flik-final-website-home.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319094/flik-final-website-home_yckocp.mp4',
             },
             {
               label: 'Mobile Website — Flikshop Angels',
               color: '#6B1DA7',
               subtitle: 'Personalized donation process through testimonials and donor highlights',
               body: 'The Angels landing page was humanized through impact metrics, user testimonials, and a notable donors section to emotionally connect visitors to the mission before asking them to give. Donor highlights act as intrinsic motivation, showing contributors how their involvement can be recognized within the community.',
-              video: '/assets/flik-final-website-angels.mp4',
+              video: 'https://res.cloudinary.com/dp14rewbz/video/upload/v1782319094/flik-final-website-angels_m394yz.mp4',
             },
           ].map((task, index) => (
             <div key={task.label} className="cs-task-card" style={{
