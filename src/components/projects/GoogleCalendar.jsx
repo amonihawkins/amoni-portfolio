@@ -31,15 +31,15 @@ const SLIDES = [
 const CONCEPT_PAGES = [
   [
     {
-      img: '/assets/gcal-concept-accessibility.png',
+      img: '/assets/gcal-concept-accessibility.jpg',
       desc: 'An accessibility page within the settings that allows users to adjust font, icon & screen size, and choose a focus mode display.',
     },
     {
-      img: '/assets/gcal-concept-palette.png',
+      img: '/assets/gcal-concept-palette.jpg',
       desc: 'A color palette carousel that features different specific themes such as "High Contrast" to help users customize colors.',
     },
     {
-      img: '/assets/gcal-concept-focus.png',
+      img: '/assets/gcal-concept-focus.jpg',
       desc: 'A focus mode that can temporarily disable the view of calendars that aren\'t currently selected.',
     },
   ],
